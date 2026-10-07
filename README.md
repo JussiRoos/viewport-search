@@ -1,3 +1,7 @@
+> [!IMPORTANT]
+> Full credit to ThioJoe and his video: https://youtu.be/pAe5hTqyQDQ
+> Extension is created from his amazing idea as a proof of concept.
+
 # Viewport Search
 
 A Chrome extension that finds a word on the page, highlights every match, and jumps from one **viewport** of matches to the next, skipping everything already on screen, instead of stepping match by match.
