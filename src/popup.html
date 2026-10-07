@@ -1,0 +1,29 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <style>
+    :root { color-scheme: light dark; }
+    body { width: 280px; margin: 0; padding: 12px; font: 13px system-ui, sans-serif; }
+    input { width: 100%; box-sizing: border-box; padding: 7px 9px; font-size: 14px; }
+    .row { display: flex; gap: 6px; margin-top: 8px; }
+    button { flex: 1; padding: 6px 0; cursor: pointer; }
+    #status { margin-top: 8px; min-height: 1.2em; opacity: .8; }
+  </style>
+</head>
+<body>
+  <input id="word" type="text" placeholder="Search this page…" autofocus>
+  <select id="mode" style="width:100%;margin-top:8px;padding:5px">
+    <option value="partial">Partial match</option>
+    <option value="prefix">Word starts with</option>
+    <option value="word">Whole word only</option>
+  </select>
+  <div class="row">
+    <button id="prev">◀ Prev</button>
+    <button id="next">Next ▶</button>
+    <button id="clear">Clear</button>
+  </div>
+  <div id="status"></div>
+  <script src="popup.js"></script>
+</body>
+</html>

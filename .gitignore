@@ -1,0 +1,14 @@
+# Build output
+dist/
+*.zip
+*.crx
+*.pem
+
+# OS / editor
+.DS_Store
+.vscode/
+.idea/
+
+# Python (scripts/make_icons.py)
+__pycache__/
+.venv/
