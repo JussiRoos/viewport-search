@@ -27,6 +27,21 @@ A Chrome extension that finds a word on the page, highlights every match, and ju
 
 Change them at `chrome://extensions/shortcuts`.
 
+## Install from GitHub Releases
+
+Until the extension is in the Chrome Web Store, you can install a release build manually:
+
+1. Download `viewport-search-<version>.zip` from the latest release on the [Releases](https://github.com/JussiRoos/viewport-search/releases/latest) page
+2. Open `chrome://extensions` and enable **Developer mode** (top right)
+3. **Drag and drop the zip** onto the extensions page. Recent Chromium-based browsers unpack and install it directly.
+4. Optional: pin it from the puzzle-piece menu in the toolbar
+
+If dropping the zip doesn't work in your browser, unzip it into a folder you will keep (the browser loads the extension from that folder, so don't delete or move it), then click **Load unpacked** and select that folder (the one containing `manifest.json`).
+
+Manually installed extensions don't update automatically. To update, remove the old version and drop in the new zip, or, if you used Load unpacked, replace the folder's contents and click the reload icon on the extension's card.
+
+This works in other Chromium browsers too (Edge, Brave, Vivaldi, Opera) via their extensions page.
+
 ## Install for development
 
 1. Open `chrome://extensions` and enable **Developer mode**
