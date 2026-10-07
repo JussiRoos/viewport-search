@@ -8,6 +8,8 @@ A Chrome extension that finds a word on the page, highlights every match, and ju
 
 <img src="src/icons/icon-128.png" width="64" alt="">
 
+**Hopefully soon in the Chrome WebStore**
+
 ## Features
 
 - Highlights all matches (yellow) and the ones currently in view (orange) using the CSS Custom Highlight API, so the page DOM is not modified
