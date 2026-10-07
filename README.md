@@ -29,7 +29,6 @@ Change them at `chrome://extensions/shortcuts`.
 
 1. Open `chrome://extensions` and enable **Developer mode**
 2. **Load unpacked** → select the `src/` folder
-3. Reload any open tabs (content scripts only inject into pages loaded after install)
 
 ## Release
 

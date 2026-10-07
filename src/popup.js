@@ -1,13 +1,21 @@
 const $ = (id) => document.getElementById(id);
 
+// The content script is injected on demand (activeTab), the first time the popup talks to a tab
+async function inject(tabId) {
+  await chrome.scripting.insertCSS({ target: { tabId }, files: ["content.css"] });
+  await chrome.scripting.executeScript({ target: { tabId }, files: ["content.js"] });
+}
+
 async function send(type, extra = {}) {
   try {
     const [tab] = await chrome.tabs.query({ active: true, currentWindow: true });
-    const state = await chrome.tabs.sendMessage(tab.id, { type, ...extra });
+    const msg = { type, ...extra };
+    const state = await chrome.tabs.sendMessage(tab.id, msg)
+      .catch(() => inject(tab.id).then(() => chrome.tabs.sendMessage(tab.id, msg)));
     render(state);
     return state;
   } catch {
-    $("status").textContent = "Can't run on this page (try reloading it).";
+    $("status").textContent = "Can't run on this page.";
   }
 }
 
