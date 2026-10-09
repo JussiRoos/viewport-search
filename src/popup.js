@@ -26,14 +26,24 @@ function render(s) {
     : "No matches";
 }
 
+let searchTimer;
+
 function runSearch() {
+  clearTimeout(searchTimer); searchTimer = null;
   localStorage.setItem("mode", $("mode").value);
   return send("search", { word: $("word").value.trim(), mode: $("mode").value });
 }
 
 $("mode").value = localStorage.getItem("mode") || "partial";
 $("mode").addEventListener("change", () => { if ($("word").value.trim()) runSearch(); });
-$("word").addEventListener("keydown", (e) => { if (e.key === "Enter") runSearch(); });
+// Search as you type, debounced so long pages aren't rescanned on every keystroke
+$("word").addEventListener("input", () => { clearTimeout(searchTimer); searchTimer = setTimeout(runSearch, 250); });
+// Enter = next viewport, Shift+Enter = previous (flushes a pending search first)
+$("word").addEventListener("keydown", async (e) => {
+  if (e.key !== "Enter") return;
+  if (searchTimer) await runSearch();
+  send(e.shiftKey ? "prev" : "next");
+});
 $("next").addEventListener("click", () => send("next"));
 $("prev").addEventListener("click", () => send("prev"));
 $("clear").addEventListener("click", () => { $("word").value = ""; send("clear"); });
