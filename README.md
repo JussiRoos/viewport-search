@@ -8,7 +8,11 @@ A Chrome extension that finds a word on the page, highlights every match, and ju
 
 <img src="src/icons/icon-128.png" width="64" alt="">
 
-**Hopefully soon in the Chrome WebStore**
+## Install
+
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/aaamoeeebopmiehpgjnchljfkfjfdcpf?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/viewport-search/aaamoeeebopmiehpgjnchljfkfjfdcpf)
+
+**[Install for Chrome from the Chrome Web Store](https://chromewebstore.google.com/detail/viewport-search/aaamoeeebopmiehpgjnchljfkfjfdcpf)**. Also works in Edge, Brave, Vivaldi and Opera, and updates automatically.
 
 ## Features
 
@@ -27,9 +31,9 @@ A Chrome extension that finds a word on the page, highlights every match, and ju
 
 Change them at `chrome://extensions/shortcuts`.
 
-## Install from GitHub Releases
+## Manual install (alternative)
 
-Until the extension is in the Chrome Web Store, you can install a release build manually:
+If you'd rather not use the Chrome Web Store, you can install a release build from GitHub manually:
 
 1. Download `viewport-search-<version>.zip` from the latest release on the [Releases](https://github.com/JussiRoos/viewport-search/releases/latest) page
 2. Open `chrome://extensions` and enable **Developer mode** (top right)
@@ -53,7 +57,7 @@ Pushing a tag builds a zip and attaches it to a GitHub release (see [.github/wor
 
 ```sh
 # bump "version" in src/manifest.json first
-git tag v1.0.1 && git push --tags
+git tag v1.2.3 && git push && git push --tags
 ```
 
 If the `CWS_EXTENSION_ID` repository variable and the `CWS_CLIENT_ID`, `CWS_CLIENT_SECRET` and `CWS_REFRESH_TOKEN` secrets are set, the same tag also uploads and publishes the build to the Chrome Web Store.
