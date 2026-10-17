@@ -4,14 +4,14 @@
 
 # Viewport Search
 
+[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/aaamoeeebopmiehpgjnchljfkfjfdcpf?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/viewport-search/aaamoeeebopmiehpgjnchljfkfjfdcpf)
+[![Build](https://github.com/JussiRoos/viewport-search/actions/workflows/build.yml/badge.svg)](https://github.com/JussiRoos/viewport-search/actions/workflows/build.yml)
+
 A Chrome extension that finds a word on the page, highlights every match, and jumps from one **viewport** of matches to the next, skipping everything already on screen, instead of stepping match by match.
 
 <img src="src/icons/icon-128.png" width="64" alt="">
 
 ## Install
-
-[![Chrome Web Store](https://img.shields.io/chrome-web-store/v/aaamoeeebopmiehpgjnchljfkfjfdcpf?label=Chrome%20Web%20Store&logo=googlechrome&logoColor=white)](https://chromewebstore.google.com/detail/viewport-search/aaamoeeebopmiehpgjnchljfkfjfdcpf)
-[![Build](https://github.com/JussiRoos/viewport-search/actions/workflows/build.yml/badge.svg)](https://github.com/JussiRoos/viewport-search/actions/workflows/build.yml)
 
 **[Install for Chrome from the Chrome Web Store](https://chromewebstore.google.com/detail/viewport-search/aaamoeeebopmiehpgjnchljfkfjfdcpf)**. Also works in Edge, Brave, Vivaldi and Opera, and updates automatically.
 
